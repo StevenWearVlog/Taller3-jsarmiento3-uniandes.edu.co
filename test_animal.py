@@ -26,11 +26,11 @@ class TestBoaConstrictor(unittest.TestCase):
         self.boa.comer_raton()
         self.assertEqual(self.boa.ratones_comidos, 1)
 
-    def test_alimentar_demasiados_ratones(self):
-        for _ in range(10):
-            self.boa.comer_raton()
-        with self.assertRaises(ValueError):
-            self.boa.comer_raton()
+def test_alimentar_demasiados_ratones(self):
+    for _ in range(20):  # Cambiado de 10 a 20
+        self.boa.comer_raton()
+    with self.assertRaises(ValueError):
+        self.boa.comer_raton()
 
 
 if __name__ == '__main__':
